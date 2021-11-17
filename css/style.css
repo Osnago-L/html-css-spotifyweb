@@ -55,11 +55,21 @@ nav{
 }
 
 /* nav-bottom  */
+.nav-bottom{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 .user{
     padding: 2px 2px;
     background-color: grey;
     border-radius: 50%;
 
+}
+.nav-bottom i{
+    color: grey;
+    font-size: 5px;
+    margin-bottom: 10px;
 }
 
 /* libreria musica  */
