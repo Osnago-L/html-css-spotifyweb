@@ -5,6 +5,7 @@
 }
 body{
     height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
 }
 /* MAIN  */
 /* main container  */
@@ -52,8 +53,12 @@ nav{
     padding-left: 5px;
 }
 .nav-top ul li span{
-    font-size: 8px;
+    display: none;
 }
+.playlist{
+    display: none;
+}
+
 /* nav-bottom  */
 .nav-bottom{
     width: 100%;
@@ -68,9 +73,10 @@ nav{
 }
 .nav-bottom i{
     font-size: 5px;
-    margin-bottom: 5px;
 }
-
+.nav-bottom span{
+    display: none;
+}
 /* libreria musica  */
 .library{
     display: flex;
@@ -84,11 +90,17 @@ nav{
     width: 100%;
     background-color: #080b12;
     filter: opacity(0.60);
+    z-index: 1;
 }
 /* FOOTER  */
 footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
     height: 45px;
+    width: 100%;
     background-color: #282828;
+    z-index: 2;
 }
 
 @media screen and (min-width: 576px){
@@ -99,15 +111,81 @@ footer{
     .nav-top{
         display: block;
     }
-
+    /* top nav  */
     .logo-small{
         display: none;
     }
     .logo{
         display: block;
-        width: 50px;
+        width: 70px;
         margin-left: 10px;
         margin-bottom: 10px;
+    }
+    .nav-top ul li span{
+        display: inline-block;
+        font-size: 6px;
+        color: grey;
+    }
+    .nav-top ul li{
+        display: flex;
+        align-items: center;
+        margin: 5px 0;
+    }
+    .playlist{
+        display: block;
+        padding-left: 5px;
+        margin-top: 10px;
+    }
+    .playlist span, .playlist ul li{
+        font-size: 6px;
+        color: grey;
+    }
+    .playlist i+span{
+       font-weight: 700;
+    }
+    .playlist h3{
+        font-size: 10px;
+    }
+    .playlist>i{
+        font-size: 10px;
+        padding: 3px;
+        color: black;
+        background-color: grey;
+    }
+    .playlist ul li{
+        list-style-type: none;
+        margin: 5px 0 5px -5px;
+
+    }
+    /* nav bottom  */
+    .nav-bottom{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: unset;
+        padding: 0 5px;
+        
+    }
+    .nav-bottom i+span{
+        display: inline-block;
+        color: grey;
+        font-size: 5px;
+        margin-left: 5px;
+    }
+    .nav-bottom img+span{
+        display: inline-block;
+        color: white;
+        font-weight: 700;
+        font-size: 5px;
+    }
+    .nav-bottom>div{
+        display: flex;
+        align-items: center;
+        padding: 2px 0;
+    }
+    .nav-bottom div:first-child{
+        border-bottom: 1px solid grey;
+        margin: 3px;
     }
     /* library  */
     .library{
