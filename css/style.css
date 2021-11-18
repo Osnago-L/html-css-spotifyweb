@@ -7,10 +7,14 @@ body{
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
 }
+/* SELETTORI GLOBALI  */
+.view-md{
+    display: none;
+}
 /* MAIN  */
 /* main container  */
 main{
-    height: calc(100% - 45px);
+    height: calc(100% - 55px);
 }
 .container-main{
     height:100%;
@@ -51,15 +55,14 @@ nav{
     .nav-top ul li{
         padding-left: 7px;
     }
-    .nav-top ul li span,.playlist{
-        display: none;
-    }
 /* nav-bottom  */
     .nav-bottom{
+        height: 60px;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-evenly;
     }
     .user{
         padding: 2px 2px;
@@ -69,9 +72,6 @@ nav{
     .nav-bottom i{
         font-size: 8px;
         color: lightgray;
-    }
-    .nav-bottom span{
-        display: none;
     }
 /* LIBRARY  */
 .library{
@@ -95,14 +95,13 @@ nav{
         
     }
     .upgrade a{
-
         color: white;
-        padding: 5px 15px;
+        padding: 4px 10px;
         border: 2px solid white;
         text-decoration: none;
-        margin-right: 10px;
+        margin-right: 20px;
         border-radius: 20px 20px;
-        font-size: 12px;
+        font-size: 10px;
     }
 
 /* FOOTER  */
@@ -110,13 +109,16 @@ footer{
     position: fixed;
     bottom: 0;
     left: 0;
-    height: 45px;
+    height: 55px;
     width: 100%;
     background-color: #282828;
     z-index: 2;
 }
 
 @media screen and (min-width: 576px){
+    .view-md{
+        display: inline-block;
+    }
     /* menu  */
         .menu{
             width: 150px;
@@ -129,7 +131,7 @@ footer{
             display: none;
         }
         .logo{
-            display: block;
+            
             width: 90px;
             margin-left: 10px;
             margin-bottom: 10px;
@@ -137,20 +139,20 @@ footer{
         .menu-icons{
             width: 18px;
         }
-        .nav-top ul li span{
-            display: inline-block;
-            font-size: 12px;
-            font-weight: 400;
-            color: lightgray;
-        }
         .nav-top ul li{
             display: flex;
             align-items: center;
             margin: 5px 0;
         }
+        .nav-top ul li span{
+            
+            font-size: 12px;
+            font-weight: 400;
+            color: lightgray;
+        }
     /* playlist  */
         .playlist{
-            display: block;
+            
             padding-left: 5px;
             margin-top: 10px;
         }
@@ -202,7 +204,7 @@ footer{
         .nav-bottom>div{
             display: flex;
             align-items: center;
-            padding-top: 5px;
+    
         }
         .nav-bottom div:first-child{
             border-bottom: 1px solid grey;
@@ -212,6 +214,9 @@ footer{
     /* library  */
         .upgrade{
             width: calc(100% - 150px);
+        }
+        .upgrade a{
+            transform: scale(120%);
         }
         .library{
             width: calc(100% - 150px);
