@@ -4,8 +4,6 @@
     padding: 0;
 }
 body{
-    min-width: 200px;
-    height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
 }
@@ -13,10 +11,18 @@ body{
 .view-md{
     display: none;
 }
+.scrollbarhide::-webkit-scrollbar{
+    display: none;
+}
+.scrollbarhide{
+    scrollbar-width: none;
+}
+
 /* MAIN  */
 /* main container  */
 main{
-    height: calc(100% - 55px);
+    height: calc(100vh - 55px);
+    
 }
 .container-main{
     height:100%;
@@ -81,6 +87,9 @@ nav{
     flex-direction: column;
     background-color: #141922;
     width: calc(100% - 25px);
+    padding-top: 40px;
+    max-height: 100%;
+    overflow-y: scroll;
 }
 /* upgrade  */
     .upgrade{
@@ -105,7 +114,65 @@ nav{
         border-radius: 20px 20px;
         font-size: 10px;
     }
-
+/* music  */
+.music{
+    height: 100%;
+}
+/* music menu  */
+    .music-menu ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 100%;
+    }
+    .music-menu ul li{
+        height: 100%;
+        color: white;
+        font-size: 10px;
+        list-style: none;
+        text-transform: uppercase;
+        margin: 0 15px;
+        padding: 10px 0;
+    }
+/* music-artists  */
+    .music-artists{
+        padding: 0 20px;
+        width: 100%;
+        
+    }
+    .recently-played {
+        margin-top: 40px;
+    }
+    .recently-played h2,.created-for h2{
+        color: white;
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+    .recently-played>div,.created-for>div{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+    }
+    .recently-played>div>div,.created-for>div>div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+        margin-right: 10px;
+    }
+    .recently-played img,.created-for img{
+        width: 150px;
+    }
+    .recently-played h4,.created-for h4{
+        color: white;
+        font-size: 15px;
+        margin: 5px 0;
+    }
+    .recently-played span,.created-for span{
+        color: lightgray;
+        font-size: 10px;
+    }
 /* FOOTER  */
 .playing{
     display: flex;
