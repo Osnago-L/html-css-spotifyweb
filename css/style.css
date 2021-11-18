@@ -269,7 +269,7 @@ nav{
         filter: opacity(0.60);
     }
     .volume-playing{
-        width: 25%;
+        width: 20%;
         height: 45px;
         display: flex;
         flex-direction: row;
@@ -395,4 +395,9 @@ nav{
         .library{
             width: calc(100% - 150px);
         }
+    /* music artist  */
+    .recently-played img,.created-for img{
+        width: 120px;
+
+    }
 }
