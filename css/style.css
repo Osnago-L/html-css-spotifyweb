@@ -34,6 +34,10 @@ a,a:visited, a:focus{
 .underline:hover{
     text-decoration: underline;
 }
+.bars:hover .time-bar-green,.bars:hover div{
+    display: inline-block;
+
+}
 
 /* MAIN  */
 /* main container  */
@@ -313,12 +317,33 @@ nav{
     }
      /* time/progress bar */
     .time-bar{
+        position: relative;
         height: 4px;
         width: 70%;
-        background-color: darkgray;
+        background-color: rgba(169, 169, 169, 0.438);
         margin: 10px 10px;
         border-radius: 20px 20px;
-        filter: opacity(0.60);
+    }
+    .time-bar-green div{
+        display: none;
+        position: absolute;
+        top: -70%;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        background-color: white;
+        border-radius: 50%;
+    }
+    .time-bar-green{
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 70%;
+        height: 4px;
+        border-radius: 20px 20px;
+        background-color: #1ed760;
+        
     }
     /* volume bar  */
     .volume-playing{
@@ -353,10 +378,9 @@ nav{
         display: none;
         height: 4px;
         width: 30%;
-        background-color: darkgray;
+        background-color: rgba(169, 169, 169, 0.459);
         margin: 0 5px;
         border-radius: 20px 20px;
-        filter: opacity(0.60);
     }
     
 @media screen and (min-width: 576px){
@@ -516,12 +540,28 @@ nav{
     }
     .volume-bar{
         display: block;
+        position: relative;
+        
+    }
+    .volume-bar-green div{
+        display: none;
+        position: absolute;
+        top: -70%;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        background-color: white;
+        border-radius: 50%;
+    }
+    .volume-bar-green{
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 70%;
         height: 4px;
-        width: 30%;
-        background-color: darkgray;
-        margin: 0 5px;
         border-radius: 20px 20px;
-        filter: opacity(0.60);
+        background-color: #1ed760;
     }
 }
 @media screen and (min-width: 768px){
