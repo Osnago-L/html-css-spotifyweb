@@ -398,7 +398,13 @@ nav{
         color: white;
     }
     .white:hover span{
-    color: white;
+    color: white ;
+    }
+    .white:hover i{
+        background-color: white;
+    }
+    .white-s:hover span{
+        color: white !important;
     }
     .white-a:hover a{
     color: white;
