@@ -167,7 +167,7 @@ nav{
     .recently-played>div>div{
         position: relative;
     }
-    .recently-played>div>div i,.created-for>div>div i{
+    .recently-played>div>div i,.created-for>div>div i,.popular-artist>div>div i{
         font-size: 40px;
         color: white;
         position: absolute;
