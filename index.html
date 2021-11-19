@@ -14,78 +14,96 @@
             <section class="menu">
                 <nav>
                     <div class="nav-top">
-                        <img class="logo-small" src="img/logo-small.svg">
-                        <img class="logo view-md" src="img/logo.svg">
+                        <a href="#"><img class="logo-small" src="img/logo-small.svg"></a>
+                        <a href="#"><img class="logo view-md" src="img/logo.svg"></a>
                         <ul>
-                            <li><img class="menu-icons" src="img/home.svg"><span class="view-md"> Home</span></li>
-                            <li><img class="menu-icons" src="img/search.svg"><span class="view-md"> Cerca</span></li>
-                            <li><img class="menu-icons" src="img/libreria.svg"><span class="view-md"> La mia libreria</span></li>
+                            <li class="border-active-menu"><img class="menu-icons " src="img/home.svg"><span class="view-md"> <a href="#">Home</a></span></li>
+                            <li class="border-active-menu"><img class="menu-icons" src="img/search.svg"><span class="view-md"> <a href="#">Cerca</a></span></li>
+                            <li class="border-active-menu"><img class="menu-icons" src="img/libreria.svg"><span class="view-md"> <a href="#">La mia libreria</a></span></li>
                         </ul>
                         <div class="playlist view-md">
                             <h3>PLAYLIST</h3>
-                            <i class="fa-solid fa-plus"></i><span> Crea Playlist</span>
+                            <i class="fa-solid fa-plus"></i><span> <a href="#">Crea Playlist</a></span>
                             <ul>
-                                <li>Nome Playlist</li>
-                                <li>Nome Playlist</li>
-                                <li>Nome Playlist</li>
-                                <li>Nome Playlist</li>
-                                <li>Nome Playlist</li>
-                                <li>Nome Playlist</li> 
+                                <li><a href="#">Nome Playlist</a></li>
+                                <li><a href="#">Nome Playlist</a></li>
+                                <li><a href="#">Nome Playlist</a></li>
+                                <li><a href="#">Nome Playlist</a></li>
+                                <li><a href="#">Nome Playlist</a></li>
+                                <li><a href="#">Nome Playlist</a></li> 
                             </ul>
                         </div>
                     </div>
                     <div class="nav-bottom">
-                        <div><i class="fa-solid fa-circle-arrow-down"></i><span class="view-md"> Installa app</span></div>
-                        <div><img class=" menu-icons user" src="img/profile.svg" alt=""><span class="view-md"> John Doe</span></div>
+                        <div><i class="fa-solid fa-circle-arrow-down"></i><span class="view-md"> <a href="#">Installa app</a></span></div>
+                        <div><img class=" menu-icons user" src="img/profile.svg" alt=""><span class="view-md"> <a href="#">John Doe</a></span></div>
                     </div>
                 </nav>
             </section>
             <section class="library scrollbarhide">
                 <div class="upgrade">
-                    <a href="#">Effettua l'upgrade</a>
+                    <a class="scale" href="#">Effettua l'upgrade</a>
                 </div>
                 <div class="music">
                     <div class="music-menu">
                         <ul>
-                            <li>In evidenza</li>
-                            <li>Podcast</li>
-                            <li>Classifiche</li>
-                            <li>Generi e Mood</li>
-                            <li>Nuove uscite</li>
-                            <li>scopri</li>
+                            <li class="border-active-library">In evidenza</li>
+                            <li class="border-active-library">Podcast</li>
+                            <li class="border-active-library">Classifiche</li>
+                            <li class="border-active-library">Generi e Mood</li>
+                            <li class="border-active-library">Nuove uscite</li>
+                            <li class="border-active-library">scopri</li>
                         </ul>
                     </div>
                     <div class="music-artists">
                         <div class="recently-played">
                             <h2>Recently played</h2>
                                 <div>
-                                    <div>
-                                        <img src="img/metal_lifting.jpg">
+                                    <div class="play">
+                                        <a href="#">
+                                            <i class=" play-song fa-regular fa-circle-play"></i>
+                                            <img src="img/metal_lifting.jpg">
+                                        </a>
                                         <h4>Artist</h4>
                                         <span>Song</span>
                                     </div>
-                                    <div>
-                                        <img src="img/stranger.jpeg">
+                                    <div class="play">
+                                        <a href="#">
+                                            <i class=" play-song fa-regular fa-circle-play"></i>
+                                            <img src="img/stranger.jpeg">
+                                        </a>
                                         <h4>Artist</h4>
                                         <span>Song</span>
                                     </div>
-                                    <div>
-                                        <img src="img/aquietplace.jpeg">
+                                    <div class="play">
+                                        <a href="#">
+                                            <i class=" play-song fa-regular fa-circle-play"></i>
+                                            <img src="img/aquietplace.jpeg">
+                                        </a>
                                         <h4>Artist</h4>
                                         <span>Song</span>
                                     </div>
-                                    <div>
-                                        <img src="img/split.jpeg">
+                                    <div class="play">
+                                        <a href="#">
+                                            <i class=" play-song fa-regular fa-circle-play"></i>
+                                            <img src="img/split.jpeg">
+                                        </a>
                                         <h4>Artist</h4>
                                         <span>Song</span>
                                     </div>
-                                    <div>
-                                        <img src="img/cure.jpeg">
+                                    <div class="play">
+                                        <a href="#">
+                                            <i class=" play-song fa-regular fa-circle-play"></i>
+                                            <img src="img/cure.jpeg">
+                                        </a>
                                         <h4>Artist</h4>
                                         <span>Song</span>
                                     </div>
-                                    <div>
-                                        <img src="img/sinister.jpeg">
+                                    <div class="play">
+                                        <a href="#">
+                                            <i class=" play-song fa-regular fa-circle-play"></i>
+                                            <img src="img/sinister.jpeg">
+                                        </a>
                                         <h4>Artist</h4>
                                         <span>Song</span>
                                     </div>
@@ -95,15 +113,19 @@
                             <h2>Creato per John Doe</h2>
                             <span>Piu ascolti, piu accurati saranno i suggerimenti</span>
                                 <div>
-                                    <div>
-                                        <img src="img/radar.jpeg">
+                                    <div class="play">
+                                        <a href="#">
+                                            <i class=" play-song fa-regular fa-circle-play"></i>
+                                            <img src="img/radar.jpeg">
+                                        </a>
                                         <h4>Artist</h4>
-                                        <span>Song</span>
                                     </div>
-                                    <div>
-                                        <img src="img/mixdaily.jpeg">
+                                    <div class="play">
+                                        <a href="#">
+                                            <i class=" play-song fa-regular fa-circle-play"></i>
+                                            <img src="img/mixdaily.jpeg">
+                                        </a>
                                         <h4>Artist</h4>
-                                        <span>Song</span>
                                     </div>
                                 </div>
                         </div>
@@ -112,14 +134,12 @@
                             <span>Piu ascolti, piu accurati saranno i suggerimenti</span>
                                 <div>
                                     <div>
-                                        <img src="img/youg.jpeg">
+                                        <a href="#"><img src="img/youg.jpeg"></a>
                                         <h4>Artist</h4>
-                                        <span>Song</span>
                                     </div>
                                     <div>
-                                        <img src="img/einaudi.jpeg">
+                                        <a href="#"><img src="img/einaudi.jpeg"></a>
                                         <h4>Artist</h4>
-                                        <span>Song</span>
                                     </div>
                                 </div>
                         </div>
