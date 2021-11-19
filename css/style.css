@@ -34,9 +34,11 @@ a,a:visited, a:focus{
 .underline:hover{
     text-decoration: underline;
 }
-.bars:hover .time-bar-green,.bars:hover div{
+.bars:hover>div{
+    background-color: #1ed760;
+}
+.bars:hover div{
     display: inline-block;
-
 }
 
 /* MAIN  */
@@ -336,14 +338,14 @@ nav{
         border-radius: 50%;
     }
     .time-bar-green{
-        display: none;
         position: absolute;
         top: 0;
         left: 0;
         width: 70%;
         height: 4px;
         border-radius: 20px 20px;
-        background-color: #1ed760;
+        background-color: rgba(255, 255, 255, 0.568);
+        
         
     }
     /* volume bar  */
@@ -561,14 +563,14 @@ nav{
         border-radius: 50%;
     }
     .volume-bar-green{
-        display: none;
+        
         position: absolute;
         top: 0;
         left: 0;
         width: 70%;
         height: 4px;
         border-radius: 20px 20px;
-        background-color: #1ed760;
+        background-color: rgba(255, 255, 255, 0.568);
     }
 }
 @media screen and (min-width: 768px){
