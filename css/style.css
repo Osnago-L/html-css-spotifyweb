@@ -6,7 +6,7 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
-a{
+a,a:visited, a:focus{
     text-decoration: none;
     color: white;
 }
@@ -21,9 +21,7 @@ a{
     scrollbar-width: none;
 }
 /* SELETTORI HOVER  */
-.white:hover{
-    color: white;
-}
+
 .play:active .play-song{
     display: block;
 }
@@ -33,7 +31,9 @@ a{
 .scale:hover{
     transform: scale(110%);
 }
-
+.underline:hover{
+    text-decoration: underline;
+}
 
 /* MAIN  */
 /* main container  */
@@ -80,7 +80,12 @@ nav{
     .nav-top ul li{
         padding-left: 8px;
         margin-bottom: 10px;
+        color: grey;
     }
+    .nav-top ul li span{
+        color: grey;
+    }
+    
 /* nav-bottom  */
     .nav-bottom{
         height: 60px;
@@ -92,12 +97,12 @@ nav{
     }
     .user{
         padding: 2px 2px;
-        background-color: lightgray;
+        background-color: grey;
         border-radius: 50%;
     }
     .nav-bottom i{
         font-size: 10px;
-        color: lightgray;
+        color: grey;
     }
 /* LIBRARY  */
 .library{
@@ -143,14 +148,16 @@ nav{
     }
     .music-menu ul li{
         height: 100%;
-        color: white;
+        color: grey;
         font-size: 11px;
+        font-weight: 600;
         list-style: none;
         text-transform: uppercase;
         margin: 0 15px;
         padding-top: 10px;
         padding-bottom: 5px;
     }
+    
 /* music-artists  */
     .music-artists{
         padding: 0 20px;
@@ -208,8 +215,9 @@ nav{
         margin: 5px 0;
     }
     .recently-played span,.created-for span,.popular-artist span{
-        color: lightgray;
+        color: grey;
         font-size: 10px;
+        font-weight: 600;
     }
     
 /* FOOTER  */
@@ -229,14 +237,12 @@ nav{
 }
 /* song-playing  */
     .song-playing{
-        
         display: flex;
         direction: row;
         align-items: center;
         justify-content: flex-start;
         width: 250px;
-        height: 45px;
-        
+        height: 45px; 
     }
     .song-playing>*{
         margin-right: 10px;
@@ -256,13 +262,16 @@ nav{
         font-size: 10px;
         color: lightgray;
     }
+    .song-name span a{
+        color: lightgray;
+    }
     .song-favorite {
         display: flex;
         flex-direction: column;
     }
     .song-favorite i {
         color: lightgray;
-        font-size: 11px;
+        font-size: 15px;
         margin: 2px;
     }
 /* action playing bar  */
@@ -290,11 +299,11 @@ nav{
         width: 100%;
         margin: 10px 0;
     }
-    .actions-playing>div i{
+    .actions-playing>div a i{
         color: white;
         font-size: 15px;
     }
-    .actions-playing>div i:nth-child(3){
+    .actions-playing>div a:nth-child(3) i{
         font-size: 25px;
     }
     .actions-playing span{
@@ -328,11 +337,12 @@ nav{
         
     }
     .action-tv-list{
+        height: 30px;
         display: flex;
         flex-direction: column;
     }
     .action-tv-list i{
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
     .volume-playing>div i{
         color: white;
@@ -357,13 +367,25 @@ nav{
     .play:hover a{
         filter: opacity(0.6);
     }
-    .border-active-menu:hover{
+    .active-menu:hover{
         background-color: rgba(255, 255, 255, 0.1);
         border-radius: 10px 10px;
+        color: white;
+    }
+    .white:hover span{
+    color: white;
+    }
+    .white-a:hover a{
+    color: white;
+    }
+    .white-i:hover i{
+        color: white;
     }
     .border-active-library:hover{
+        color: white;
         border-bottom: 2px solid #1ed760;
     }
+    
     /* -------------  */
     .view-md{
         display: inline-block;
@@ -380,7 +402,6 @@ nav{
             display: none;
         }
         .logo{
-            
             width: 90px;
             margin-left: 10px;
             margin-bottom: 10px;
@@ -389,15 +410,17 @@ nav{
             width: 20px;
         }
         .nav-top ul li{
-            display: flex;
-            align-items: center;
             margin: 5px 5px;
             padding: 5px 3px;
         }
-        .nav-top ul li span{
+        .nav-top ul li a{
+            display: flex;
+            align-items: center;
+        }
+        .nav-top ul li a span{
             font-size: 15px;
-            font-weight: 400;
-            color: lightgray;
+            font-weight: 600;
+            color: grey;
             margin-left: 5px;
         }
     /* playlist  */
@@ -405,9 +428,10 @@ nav{
             padding-left: 5px;
             margin-top: 10px;
         }
-        .playlist span, .playlist ul li{
+        .playlist a span, .playlist ul li a{
             font-size: 13px;
-            color: lightgray;
+            font-weight: 600;
+            color: grey;
         }
         .playlist i+span{
         font-weight: 700;
@@ -421,7 +445,7 @@ nav{
             font-size: 15px;
             padding: 3px;
             color: black;
-            background-color: lightgray;
+            background-color: grey;
             border-radius: 50%;
         }
         .playlist ul li{
@@ -437,31 +461,32 @@ nav{
             padding: 0 5px;
             
         }
-        .nav-bottom a+span{
+        .nav-bottom .install span{
             display: inline-block;
-            color: lightgray;
             font-size: 12px;
             margin-left: 5px;
-            
+            color: grey;
         }
-        .nav-bottom>div:last-child a+span{
+
+        .nav-bottom .profile span{
             display: inline-block;
             color: white;
             font-weight: 700;
             font-size: 15px;
             margin-left: 5px;
         }
-        .nav-bottom>div{
+        .nav-bottom>div a{
             display: flex;
             align-items: center;
     
         }
-        .nav-bottom div:first-child{
+        .nav-bottom .install{
             border-bottom: 1px solid grey;
             padding-bottom: 5px;
             padding-left: 5px; 
         }
     /* library  */
+
         .upgrade{
             width: calc(100% - 150px);
         }
@@ -477,7 +502,17 @@ nav{
         flex-direction: row;
     }
     .song-favorite i{
+        font-size: 15px;
         margin-right: 5px;
+    }
+    .action-tv-list{
+        height: unset;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .action-tv-list i{
+        margin-bottom: unset;
     }
     .volume-bar{
         display: block;
@@ -500,8 +535,11 @@ nav{
 }
 @media screen and (min-width: 992px){
     .recently-played>div>div,.created-for>div>div,.popular-artist>div>div{
-        
         width: 15%;
+    }
+    .music-menu ul li{
+        font-size: 14px;
+        
     }
 }
 @media screen and (min-width: 1200px){
